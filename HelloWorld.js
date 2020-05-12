@@ -17,10 +17,12 @@ function askQuestion(question){
 
 async function Program(){
     // Your Code Goes Here...
-    let username = await askQuestion("What is your name?\n");
-    console.log("Hello " + username);
+    let userInput1 = await askQuestion("Enter the first number: ");
+    let number1 = parseInt(userInput1);
+    let userInput2 = await askQuestion("Enter the second number: ");
+    let number2 = parseInt(userInput2);
+    console.log(number1 + number2);
 }
-
 
 Program().then(() => {
     process.exit(0);
